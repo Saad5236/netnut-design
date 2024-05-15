@@ -1,0 +1,1101 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: 0.3s ease;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.gradient-btn {
+  padding: 12px 24px;
+  background-color: blue; /* Background color for the first button */
+  border-radius: 10px;
+  background: linear-gradient(287.06deg, var(--purple) 0.97%, var(--orange) 52.62%);
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.gradient-btn::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 2px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(287.06deg, var(--purple) 0.97%, var(--orange) 52.62%);
+  filter: blur(10px);
+  z-index: -1; /* Place the gradient behind the button content */
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.gradient-btn:hover {
+  background: linear-gradient(287.06deg, var(--orange) 0.97%, var(--purple) 52.62%);
+}
+
+img {
+  width: 100%;
+}
+
+:root {
+  --orange: rgba(243, 120, 32, 1);
+  --purple: rgba(124, 57, 244, 1);
+  --dark-blue: rgba(2, 31, 89, 1);
+  --blue: rgba(34, 59, 110, 1);
+  --grey: rgba(92, 102, 122, 1);
+  --dark-grey: rgba(77, 92, 122, 1);
+  --lighter-grey: rgba(127, 138, 160, 1);
+  --light-grey: rgba(104, 114, 134, 1);
+  --primary-container-width: 85%;
+  --primary-container-max-width: 1900px;
+}
+
+/* _________ALL MAIN STYLING__________ */
+nav .container-fluid,
+main .hero,
+.featured-in,
+.proxy-products,
+.hassle-free,
+.proxies-benefits-header,
+.integrations-compatibility-inner,
+.company-stats-inner,
+.proxy-uses-cards-inner,
+.proxies-uses-header,
+.proxy-success-rates-inner,
+.proxies-stats,
+.proxy-generator-inner,
+.customer-reviews-outer,
+.features,
+.worldwide-proxies,
+.pricing,
+.footer-bottom-panel {
+  max-width: 1800px;
+  width: var(--primary-container-width);
+  margin-inline: auto;
+}
+
+main {
+  background-image: url(../images/header-bg-img.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+main nav {
+  background-color: transparent !important;
+}
+main nav .container-fluid {
+  border-bottom: 1px solid rgb(214, 220, 228);
+}
+main nav .container-fluid .navbar-brand {
+  max-width: 80px;
+}
+main nav .container-fluid .nav-link {
+  color: green;
+}
+main nav .container-fluid .nav-link.mobile-language-dropdown {
+  color: var(--grey);
+  font-weight: 500;
+}
+main nav .container-fluid .nav-link,
+main nav .container-fluid .nav-btn {
+  color: var(--dark-blue);
+  font-weight: 700;
+}
+main .hero {
+  gap: 250px;
+  margin-top: 100px;
+}
+
+.hero-text-panel .hero-company-rating-imgs .hero-company-rating-img {
+  max-width: 100px;
+}
+.hero-text-panel .hero-company-rating-imgs .hero-company-rating-img:not(:last-child) {
+  border-right: 1px solid #e7e7e7;
+}
+.hero-text-panel .hero-heading {
+  color: var(--dark-blue);
+  font-weight: 600;
+}
+.hero-text-panel .hero-heading span {
+  color: var(--orange);
+}
+.hero-text-panel p {
+  color: var(--grey);
+  font-weight: 500;
+}
+.hero-text-panel .hero-btns button {
+  padding: 12px 24px;
+}
+.hero-text-panel .hero-btns button:nth-child(2) img {
+  max-width: 20px;
+}
+.hero-text-panel .hero-btns button:nth-child(2):hover {
+  background: linear-gradient(287.06deg, var(--purple) 0.97%, var(--orange) 52.62%);
+  background-clip: text;
+  -webkit-background-clip: text; /* For Safari/Chrome */
+  color: transparent;
+}
+.hero-text-panel .hero-residential-proxies {
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+  gap: 20px;
+  color: var(--dark-blue);
+}
+.hero-text-panel .hero-residential-proxies h2 {
+  font-weight: 700;
+}
+
+.featured-in h3 {
+  color: var(--blue);
+}
+.featured-in .featured-in-imgs {
+  padding-block: 20px;
+  border-top: 1px dashed rgb(207, 203, 221);
+  border-bottom: 1px dashed rgb(207, 203, 221);
+  justify-items: center;
+  align-content: center;
+}
+.featured-in .featured-in-imgs img {
+  max-width: 200px;
+}
+
+.proxy-products h2 {
+  font-weight: 600;
+  color: var(--dark-blue);
+}
+.proxy-products p {
+  color: var(--dark-blue);
+}
+.proxy-products .proxy-products-items {
+  gap: 20px;
+}
+.proxy-products .proxy-products-items .proxy-products-item {
+  flex-basis: calc(50% - 10px) !important;
+  align-items: flex-start;
+  background-color: aqua;
+  position: relative;
+  padding: 40px;
+  border-radius: 15px;
+}
+.proxy-products .proxy-products-items .proxy-products-item:is(:nth-child(1), :nth-child(2)) {
+  padding-top: 80px;
+}
+.proxy-products .proxy-products-items .proxy-products-item:nth-child(1) {
+  background: linear-gradient(289.14deg, #8a49ff -6.56%, #fe9d58 49.92%);
+}
+.proxy-products .proxy-products-items .proxy-products-item:nth-child(2) {
+  background-color: rgb(79, 155, 255);
+}
+.proxy-products .proxy-products-items .proxy-products-item:is(:nth-child(3), :nth-child(4)) {
+  background-color: rgb(247, 247, 247);
+}
+.proxy-products .proxy-products-items .proxy-products-item:is(:nth-child(3), :nth-child(4)) h3 {
+  color: black;
+}
+.proxy-products .proxy-products-items .proxy-products-item:is(:nth-child(3), :nth-child(4)) ul {
+  color: var(--dark-grey);
+}
+.proxy-products .proxy-products-items .proxy-products-item .proxy-products-item-badge {
+  background-color: white;
+  color: var(--dark-blue);
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.proxy-products .proxy-products-items .proxy-products-item .proxy-products-item-img {
+  max-width: 65px;
+}
+.proxy-products .proxy-products-items .proxy-products-item h3 {
+  color: white;
+}
+.proxy-products .proxy-products-items .proxy-products-item ul {
+  color: white;
+  display: grid;
+  gap: 10px;
+}
+.proxy-products .proxy-products-items .proxy-products-item ul li img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.proxy-products-qualites {
+  width: 100%;
+}
+.proxy-products-qualites .proxy-products-qualites-row {
+  width: 100%;
+  margin-inline: auto;
+}
+.proxy-products-qualites .proxy-products-qualites-row.row-1 {
+  position: relative;
+}
+.proxy-products-qualites .proxy-products-qualites-row.row-1 .proxy-product-quality {
+  min-height: 100px;
+}
+.proxy-products-qualites .proxy-products-qualites-row.row-2 {
+  border-top: 1px solid rgb(207, 203, 221);
+  border-bottom: 1px solid rgb(207, 203, 221);
+}
+.proxy-products-qualites .proxy-products-qualites-row.row-2 .proxy-product-quality {
+  min-height: 160px;
+  text-align: center;
+}
+.proxy-products-qualites .proxy-products-qualites-row.row-1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, transparent, white);
+}
+.proxy-products-qualites .proxy-products-qualites-row:is(.row-1, .row-2) .proxy-product-quality:not(:last-child) {
+  border-right: 1px solid rgb(207, 203, 221);
+}
+.proxy-products-qualites .proxy-products-qualites-row.row-2 .proxy-product-quality img {
+  max-width: 30px;
+}
+
+.hassle-free {
+  margin-top: 100px;
+  gap: 30px;
+}
+.hassle-free .hassle-free-text-panel h2 {
+  color: var(--dark-blue);
+  font-weight: 600;
+}
+.hassle-free .hassle-free-text-panel p {
+  color: var(--grey);
+}
+.hassle-free .hassle-free-text-panel ul li {
+  color: var(--dark-blue);
+}
+.hassle-free .hassle-free-text-panel ul li img {
+  max-width: 20px;
+}
+
+.proxies-benefits {
+  margin-top: 100px;
+}
+.proxies-benefits .proxies-benefits-header {
+  background-image: url(../images/proxies-benefits-header-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding-bottom: 8%;
+}
+.proxies-benefits .proxies-benefits-header .proxies-benefits-header-inner {
+  margin-left: -7%;
+  width: 100%;
+  gap: 8%;
+}
+.proxies-benefits .proxies-benefits-header .proxies-benefits-header-inner .proxies-benefits-header-img {
+  width: 35%;
+  min-width: 300px;
+}
+.proxies-benefits .proxies-benefits-header .proxies-benefits-header-inner h2 {
+  margin-bottom: 8.5%;
+  font-size: 46px;
+  color: white;
+  font-weight: 600;
+}
+.proxies-benefits .proxies-benefits-content .proxies-benefits-content-row {
+  gap: 12%;
+}
+.proxies-benefits .proxies-benefits-content .proxies-benefits-content-row .proxies-benefit h4 {
+  color: var(--dark-blue);
+}
+.proxies-benefits .proxies-benefits-content .proxies-benefits-content-row .proxies-benefit div {
+  color: var(--lighter-grey);
+}
+.proxies-benefits .proxies-benefits-content .proxies-benefits-content-row .proxies-benefit img {
+  width: 65px;
+}
+
+.integrations-compatibility {
+  background-color: rgb(248, 247, 253);
+  margin-top: 100px;
+}
+.integrations-compatibility .integrations-compatibility-inner .integrations-compatibility-text {
+  color: var(--dark-blue);
+}
+.integrations-compatibility .integrations-compatibility-inner .integrations-compatibility-text h2 {
+  font-weight: 600;
+}
+.integrations-compatibility .integrations-compatibility-inner .integrations-compatibility-text p {
+  font-weight: 400;
+}
+.integrations-compatibility .integrations-compatibility-inner .integrations-compatibility-img {
+  max-width: 700px;
+  margin-left: auto;
+}
+
+.company-stats,
+.proxies-stats {
+  margin-top: 100px;
+  border-top: 1px solid rgb(207, 203, 221);
+  border-bottom: 1px solid rgb(207, 203, 221);
+}
+.company-stats .company-stats-inner h2,
+.proxies-stats .company-stats-inner h2 {
+  color: var(--dark-blue);
+  font-weight: 600;
+}
+.company-stats .company-stats-inner p,
+.proxies-stats .company-stats-inner p {
+  color: var(--light-grey);
+  font-weight: 400;
+}
+
+.proxies-uses {
+  margin-top: 100px;
+}
+.proxies-uses .proxies-uses-inner h2 {
+  color: var(--dark-blue);
+  font-weight: 600;
+}
+.proxies-uses .proxies-uses-inner > p {
+  color: var(--dark-blue);
+  font-weight: 400;
+  max-width: 700px;
+  margin-inline: auto;
+}
+.proxies-uses .proxies-uses-inner .proxy-uses-cards {
+  background-color: rgb(247, 247, 247);
+  position: relative;
+}
+.proxies-uses .proxies-uses-inner .proxy-uses-cards::before, .proxies-uses .proxies-uses-inner .proxy-uses-cards::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  z-index: 10;
+}
+.proxies-uses .proxies-uses-inner .proxy-uses-cards::before {
+  top: 0;
+  background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+}
+.proxies-uses .proxies-uses-inner .proxy-uses-cards::after {
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+}
+.proxies-uses .proxies-uses-inner .proxy-uses-cards .proxy-uses-cards-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  column-gap: 20px;
+  position: relative;
+  z-index: 1;
+}
+.proxies-uses .proxies-uses-inner .proxy-uses-cards .proxy-uses-cards-inner .proxy-use-card {
+  flex: 1 1 calc(25% - 20px);
+  aspect-ratio: 3/2;
+  border-radius: 10px;
+  border: 1px solid rgb(207, 203, 221);
+  background-color: white;
+}
+.proxies-uses .proxies-uses-inner .proxy-uses-cards .proxy-uses-cards-inner .proxy-use-card:nth-of-type(2n) {
+  margin-top: 20px;
+}
+.proxies-uses .proxies-uses-inner .proxy-uses-cards .proxy-uses-cards-inner .proxy-use-card img {
+  max-width: 30px;
+}
+.proxies-uses .proxies-uses-inner .proxy-uses-cards .proxy-uses-cards-inner .proxy-use-card p {
+  color: var(--dark-blue);
+  font-weight: 500;
+}
+.proxies-uses .proxies-uses-inner .proxy-uses-btns .proxy-uses-contact-btn {
+  padding: 12px 24px;
+  border: 1px solid var(--grey);
+  border-radius: 10px;
+}
+
+.proxy-success-rates {
+  margin-top: 100px;
+  position: relative;
+  min-height: 700px;
+}
+.proxy-success-rates .proxy-success-rates-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.proxy-success-rates .proxy-success-rates-bg img {
+  height: 100%;
+}
+.proxy-success-rates .proxy-success-rates-inner {
+  position: relative;
+  top: -40px;
+  z-index: 11;
+  gap: 50px;
+}
+.proxy-success-rates .proxy-success-rates-inner .proxy-success-rates-img {
+  max-width: 650px;
+}
+.proxy-success-rates .proxy-success-rates-inner .proxy-success-rates-text {
+  color: white;
+}
+
+.proxies-stats {
+  border-radius: 10px;
+}
+.proxies-stats h2 {
+  color: var(--dark-blue);
+  font-weight: 600;
+}
+.proxies-stats p {
+  color: var(--light-grey);
+  font-weight: 400;
+}
+
+.customer-reviews-outer-wrapper {
+  margin-top: 100px;
+}
+.customer-reviews-outer-wrapper .customer-reviews-outer {
+  background-color: rgb(247, 249, 252);
+  border-radius: 20px;
+  padding-inline: 80px;
+}
+.customer-reviews-outer-wrapper .customer-reviews-outer .customer-reviews {
+  overflow-y: hidden;
+  width: 100%;
+  margin-inline: auto;
+}
+.customer-reviews-outer-wrapper .customer-reviews-outer .customer-reviews .customer-reviews-text-panel {
+  align-self: center;
+}
+.customer-reviews-outer-wrapper .customer-reviews-outer .customer-reviews .customer-reviews-text-panel .customer-reviews-branding > div:first-child {
+  border-right: 1px solid var(--grey);
+}
+.customer-reviews-outer-wrapper .customer-reviews-outer .customer-reviews .customer-reviews-text-panel .customer-reviews-branding img {
+  width: 200px;
+}
+.customer-reviews-outer-wrapper .customer-reviews-outer .customer-reviews .customer-reviews-panel {
+  max-height: 350px;
+  overflow-y: auto;
+}
+.customer-reviews-outer-wrapper .customer-reviews-outer .customer-reviews .customer-reviews-panel::-webkit-scrollbar {
+  display: none;
+}
+.customer-reviews-outer-wrapper .customer-reviews-outer .customer-reviews .customer-reviews-panel .customer-review-cards {
+  height: fit-content;
+  gap: 20px;
+}
+.customer-reviews-outer-wrapper .customer-reviews-outer .customer-reviews .customer-reviews-panel .customer-review-cards:first-child {
+  animation: scrollAnimation1 3s linear infinite alternate;
+}
+.customer-reviews-outer-wrapper .customer-reviews-outer .customer-reviews .customer-reviews-panel .customer-review-cards:last-child {
+  animation: scrollAnimation2 3s linear infinite alternate;
+}
+@keyframes scrollAnimation1 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+@keyframes scrollAnimation2 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.customer-reviews-outer-wrapper .customer-reviews-outer .customer-reviews .customer-reviews-panel .customer-review-cards .customer-review-cards-inner {
+  border: 3px solid grey;
+}
+.customer-reviews-outer-wrapper .customer-reviews-outer .customer-reviews .customer-reviews-panel .customer-review-card {
+  background-color: white;
+  border-radius: 10px;
+}
+.customer-reviews-outer-wrapper .customer-reviews-outer .customer-reviews .customer-reviews-panel .customer-review-card .customer-review-rating img {
+  max-width: 15px;
+}
+.customer-reviews-outer-wrapper .customer-reviews-outer .customer-reviews .customer-reviews-panel .customer-review-card .customer-review-profile {
+  gap: 8px;
+}
+.customer-reviews-outer-wrapper .customer-reviews-outer .customer-reviews .customer-reviews-panel .customer-review-card .customer-review-profile img {
+  width: 45px;
+  height: 45px;
+}
+
+.proxy-generator {
+  margin-top: 100px;
+  background-image: url(../images/proxy-generator-bg.png);
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+  padding-block: 150px;
+}
+.proxy-generator .proxy-generator-inner {
+  position: relative;
+  top: -70px;
+  gap: 120px;
+}
+.proxy-generator .proxy-generator-inner .proxy-generator-text-panel {
+  flex-grow: 1; /* Grow to fill available space */
+  flex-shrink: 1; /* Allow shrinking when space is limited */
+  flex-basis: 0;
+  color: white;
+}
+.proxy-generator .proxy-generator-inner .proxy-generator-text-panel h2 {
+  font-weight: 600;
+}
+.proxy-generator .proxy-generator-inner .proxy-generator-text-panel p {
+  font-weight: 500;
+}
+.proxy-generator .proxy-generator-inner .proxy-generator-form-panel {
+  background-color: rgba(212, 212, 212, 0.5);
+  border-radius: 20px;
+  max-width: 950px;
+  flex-basis: 100%;
+  min-width: 500px;
+  flex-shrink: 1; /* Allow shrinking when space is limited */
+}
+.proxy-generator .proxy-generator-inner .proxy-generator-form-panel .proxy-generator-form {
+  background-color: rgb(123, 86, 196);
+  color: white;
+  border-radius: 10px;
+}
+.proxy-generator .proxy-generator-inner .proxy-generator-form-panel .proxy-generator-form .proxy-generator-form-header > div {
+  gap: 7px;
+}
+.proxy-generator .proxy-generator-inner .proxy-generator-form-panel .proxy-generator-form .proxy-details > div {
+  flex: 1;
+}
+.proxy-generator .proxy-generator-inner .proxy-generator-form-panel .proxy-generator-form .proxy-details > div:not(:last-child) {
+  border-right: 1px solid white;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 100px;
+  gap: 20px;
+}
+.features .feature {
+  background-color: rgb(247, 249, 252);
+  padding: 40px;
+  border-radius: 20px;
+}
+.features .feature img {
+  max-width: 60px;
+  margin-bottom: 30px;
+}
+.features .feature h3 {
+  margin-bottom: 30px;
+  color: var(--dark-blue);
+}
+.features .feature p {
+  color: var(--lighter-grey);
+}
+
+.worldwide-proxies {
+  margin-top: 100px;
+  color: var(--dark-blue);
+}
+.worldwide-proxies h2 {
+  font-weight: 600;
+}
+.worldwide-proxies .worldwide-proxies-countries {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.worldwide-proxies .worldwide-proxies-countries .proxy-country {
+  background-color: rgb(247, 249, 252);
+}
+.worldwide-proxies .worldwide-proxies-countries .proxy-country.proxy-country-germany {
+  display: none !important;
+}
+.worldwide-proxies .worldwide-proxies-countries .proxy-country p {
+  color: var(--lighter-grey);
+}
+
+.pricing {
+  color: var(--dark-blue);
+  margin-top: 100px;
+}
+.pricing h2 {
+  font-weight: 600;
+}
+.pricing .pricing-table {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: start;
+  gap: 20px;
+}
+.pricing .pricing-table .pricing-table-column {
+  border: 1.5px solid rgb(230, 233, 239);
+}
+.pricing .pricing-table .pricing-table-column .pricing-table-column-header {
+  min-height: 90px;
+  background-color: rgb(247, 249, 252);
+}
+.pricing .pricing-table .pricing-table-column .pricing-table-column-header.column-header-1 {
+  background-color: rgb(233, 229, 248);
+}
+.pricing .pricing-table .pricing-table-column .pricing-table-column-header.column-header-2 {
+  background-color: rgb(255, 225, 204);
+}
+.pricing .pricing-table .pricing-table-column .pricing-table-column-header.column-header-3 {
+  background-color: rgb(233, 229, 248);
+}
+.pricing .pricing-table .pricing-table-column .pricing-table-column-header img {
+  max-width: 100px;
+}
+.pricing .pricing-table .pricing-table-column .pricing-table-column-cells .pricing-table-column-cell {
+  min-height: 90px;
+}
+.pricing .pricing-table .pricing-table-column .pricing-table-column-cells .pricing-table-column-cell:not(:last-child) {
+  border-bottom: 1px solid rgb(230, 233, 239);
+}
+.pricing .pricing-table .pricing-table-column .pricing-table-column-cells .pricing-table-column-cell.last-column-cell {
+  border-bottom: 0;
+}
+
+.faqs {
+  max-width: 1400px;
+  margin-inline: auto;
+  color: var(--dark-blue);
+  margin-top: 100px;
+}
+.faqs h2 {
+  font-weight: 600;
+}
+.faqs .faqs-qnas .faqs-qna {
+  border: 1.5px solid rgb(230, 233, 239);
+}
+
+footer {
+  margin-top: 150px;
+  background-image: url(../images/footer-main-bg.png);
+  background-size: 100% auto;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+footer .footer-inner {
+  margin-inline: auto;
+  padding-inline: 80px;
+  max-width: 1800px;
+  width: var(--primary-container-width);
+}
+footer .footer-inner .footer-top-panel {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  background-color: rgb(253, 231, 215);
+  overflow: hidden;
+}
+footer .footer-inner .footer-top-panel h3 {
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+  font-weight: 500;
+}
+footer .footer-inner .footer-top-panel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+footer .footer-inner .footer-main-panel {
+  margin: 80px 0 90px 0;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+footer .footer-inner .footer-main-panel .footer-main-panel-col a {
+  color: white;
+  text-decoration: none;
+}
+footer .footer-inner .footer-main-panel .footer-main-panel-col a img {
+  max-width: 25px;
+}
+footer .footer-inner .footer-main-panel .footer-main-panel-col a .footer-social-media-links img {
+  width: 25px;
+}
+footer .footer-inner .footer-main-panel .footer-main-panel-col select {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  max-width: 180px;
+  padding-block: 12px;
+  border: none;
+}
+footer .footer-inner .footer-main-panel .footer-main-panel-col select option {
+  background-color: grey;
+}
+footer .footer-bottom-panel {
+  padding: 30px 0 80px 0;
+  border-top: 1px solid rgb(208, 204, 219);
+}
+footer .footer-bottom-panel > div:nth-child(1) a {
+  color: white;
+  text-decoration: none;
+}
+footer .footer-bottom-panel > div:nth-child(2) {
+  gap: 10px;
+}
+footer .footer-bottom-panel img {
+  max-width: 70px !important;
+}
+
+@media (width <= 1919px) {
+  :root {
+    --primary-container-width: 80%;
+  }
+  main nav {
+    border-bottom: 1px solid rgb(214, 220, 228);
+  }
+  main nav .container-fluid {
+    border-bottom: none !important;
+    width: 90%;
+  }
+  main nav .container-fluid .nav-items-left .nav-link {
+    font-weight: 600;
+  }
+  main nav .container-fluid .nav-items-right .nav-link,
+  main nav .container-fluid .nav-items-right .nav-btn {
+    font-weight: 500;
+  }
+  main .hero {
+    gap: 40px;
+    margin-top: 70px;
+  }
+  .featured-in .featured-in-imgs img {
+    max-width: 150px;
+  }
+  .proxies-benefits {
+    margin-top: 200px;
+  }
+  .proxies-benefits .proxies-benefits-header {
+    background-image: url(../images/proxies-benefits-header-bg-mobile.png);
+    padding-bottom: 10%;
+  }
+  .proxies-benefits .proxies-benefits-header .proxies-benefits-header-inner {
+    margin-left: 5%;
+    gap: 4%;
+  }
+  .proxies-benefits .proxies-benefits-header .proxies-benefits-header-inner .proxies-benefits-header-img {
+    width: 43%;
+  }
+  .proxies-benefits .proxies-benefits-header .proxies-benefits-header-inner h2 {
+    margin-bottom: 14%;
+  }
+  .proxies-benefits-content {
+    margin-inline: auto;
+    width: var(--primary-container-width);
+  }
+  .company-stats {
+    width: var(--primary-container-width);
+    margin-inline: auto;
+    border-radius: 10px;
+  }
+  .company-stats .company-stats-inner {
+    width: 100%;
+  }
+  .proxies-uses .proxies-uses-inner .proxy-uses-cards {
+    background-color: white;
+  }
+  .proxies-uses .proxies-uses-inner .proxy-uses-cards .proxy-uses-cards-inner .proxy-use-card {
+    aspect-ratio: 1/1;
+  }
+  .proxies-uses .proxies-uses-inner .proxy-uses-cards .proxy-uses-cards-inner .proxy-use-card:hover {
+    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.2);
+  }
+  .proxy-generator {
+    background-image: url(../images/proxy-generator-bg-2.png);
+    padding-block: 10%;
+  }
+  .proxy-generator .proxy-generator-inner {
+    top: -40px;
+    gap: 80px;
+  }
+  .proxy-generator .proxy-generator-inner .proxy-generator-form-panel {
+    max-width: 700px;
+    flex-basis: 100%;
+    min-width: 500px;
+  }
+  .customer-reviews-outer-wrapper {
+    padding-inline: 60px;
+  }
+  .customer-reviews-outer-wrapper .customer-reviews-outer {
+    max-width: 2000px;
+    padding-inline: 0;
+    width: 100%;
+  }
+  .customer-reviews-outer-wrapper .customer-reviews-outer .customer-reviews {
+    width: calc(var(--primary-container-width) + 90px) !important;
+  }
+  .worldwide-proxies .worldwide-proxies-countries {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .worldwide-proxies .worldwide-proxies-countries .proxy-country {
+    background-color: rgb(247, 249, 252);
+  }
+  .worldwide-proxies .worldwide-proxies-countries .proxy-country.proxy-country-germany {
+    display: flex !important;
+  }
+  .faqs {
+    width: 70%;
+  }
+  .footer-wrapper {
+    padding-inline: 60px;
+  }
+  .footer-wrapper .footer-inner {
+    padding-inline: 0;
+    max-width: 2000px;
+    width: 100%;
+  }
+  .footer-wrapper .footer-inner .footer-inner-content {
+    margin-inline: auto;
+    width: calc(var(--primary-container-width) + 90px) !important;
+  }
+}
+@media (width <= 1400px) {
+  footer {
+    background-size: 100% 85%;
+  }
+}
+@media (width <= 1100px) {
+  :root {
+    --primary-container-width: 90%;
+  }
+  main .hero {
+    gap: 40px;
+  }
+  .proxy-generator {
+    background: none;
+    padding-block: 0;
+  }
+  .proxy-generator .proxy-generator-inner {
+    flex-direction: column;
+    align-items: flex-start !important;
+    top: 0;
+    gap: 30px;
+  }
+  .proxy-generator .proxy-generator-inner .proxy-generator-text-panel {
+    color: var(--dark-blue);
+  }
+  .proxy-generator .proxy-generator-inner .proxy-generator-form-panel {
+    align-self: center;
+    min-width: 600px;
+  }
+  .customer-reviews-outer-wrapper {
+    padding-inline: 0;
+  }
+  .customer-reviews-outer-wrapper .customer-reviews-outer .customer-reviews {
+    width: calc(var(--primary-container-width)) !important;
+  }
+}
+@media (width < 992px) {
+  .customer-reviews-outer-wrapper .customer-reviews-outer .customer-reviews .customer-reviews-panel {
+    margin-top: 50px;
+    max-height: 100%;
+  }
+  .customer-reviews-outer-wrapper .customer-reviews-outer .customer-reviews .customer-reviews-panel .customer-review-cards {
+    padding-inline: 0 !important;
+  }
+  .customer-reviews-outer-wrapper .customer-reviews-outer .customer-reviews .customer-reviews-panel .customer-review-cards:first-child, .customer-reviews-outer-wrapper .customer-reviews-outer .customer-reviews .customer-reviews-panel .customer-review-cards:last-child {
+    animation: none;
+  }
+  .features {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .features .feature {
+    max-width: 500px;
+  }
+  footer .footer-wrapper {
+    padding-inline: 0;
+  }
+  footer .footer-wrapper .footer-inner {
+    width: 100%;
+  }
+  footer .footer-wrapper .footer-inner .footer-inner-content {
+    width: var(--primary-container-width) !important;
+  }
+  footer .footer-wrapper .footer-inner .footer-inner-content .footer-main-panel {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  footer .footer-bottom-panel {
+    gap: 10px;
+    flex-direction: column;
+  }
+  footer .footer-bottom-panel img {
+    max-width: 40px;
+  }
+}
+@media (width <= 825px) {
+  .proxies-uses .proxies-uses-inner .proxy-uses-cards::before, .proxies-uses .proxies-uses-inner .proxy-uses-cards::after {
+    background: linear-gradient(to bottom, transparent, transparent);
+  }
+  .proxies-uses .proxies-uses-inner .proxy-uses-cards .proxy-uses-cards-inner {
+    row-gap: 20px;
+  }
+  .proxies-uses .proxies-uses-inner .proxy-uses-cards .proxy-uses-cards-inner .proxy-use-card {
+    flex: 1 1 calc(50% - 20px);
+  }
+  .proxies-uses .proxies-uses-inner .proxy-uses-cards .proxy-uses-cards-inner .proxy-use-card:nth-of-type(2n) {
+    margin-top: 0;
+  }
+}
+@media (width <= 768px) {
+  main {
+    background-image: url(../images/header-bg-img-mobile.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+  main nav {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  main .hero {
+    margin-top: 50px;
+  }
+  .hero-text-panel {
+    text-align: center;
+  }
+  .hero-text-panel .hero-company-rating-imgs {
+    justify-content: center;
+  }
+  .hero-text-panel .hero-btns {
+    flex-direction: column;
+  }
+  .hero-text-panel .hero-residential-proxies-wrapper {
+    display: none !important;
+  }
+  .featured-in .featured-in-imgs img {
+    max-width: 150px;
+    margin: auto;
+  }
+  .proxy-products h2 {
+    font-weight: 600;
+    color: var(--dark-blue);
+  }
+  .proxy-products p {
+    color: var(--dark-blue);
+  }
+  .proxy-products-qualites-row.row-2 .proxy-product-quality:not(:last-child) {
+    border-bottom: 1px solid rgb(207, 203, 221);
+  }
+  .hassle-free {
+    display: none;
+  }
+  .proxies-benefits .proxies-benefits-header {
+    padding-bottom: 14%;
+    width: 100%;
+  }
+  .proxies-benefits .proxies-benefits-header .proxies-benefits-header-inner .proxies-benefits-header-img {
+    width: 50% !important;
+    min-width: 200px;
+  }
+  .proxies-benefits .proxies-benefits-header .proxies-benefits-header-inner h2 {
+    display: none;
+  }
+  .proxies-benefits .proxies-benefits-content .proxies-benefits-content-row {
+    gap: 40px;
+  }
+  .company-stats-inner {
+    position: relative;
+  }
+  .company-stats-inner::before, .company-stats-inner::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(207, 203, 221);
+    z-index: 100;
+  }
+  .company-stats-inner::before {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 1px;
+  }
+  .company-stats-inner::after {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 1px;
+  }
+  .proxy-success-rates {
+    background-color: rgb(248, 247, 253);
+  }
+  .proxy-success-rates .proxy-success-rates-inner {
+    top: 0;
+  }
+  .proxy-success-rates .proxy-success-rates-inner .proxy-success-rates-text {
+    color: var(--dark-blue);
+  }
+  .proxies-stats .proxies-stat:nth-child(1) {
+    border-right: 1px solid #cfcbdd;
+  }
+  .proxies-stats .proxies-stat:nth-child(3) {
+    border-top: 1px solid #cfcbdd;
+  }
+  .proxy-generator .proxy-generator-inner .proxy-generator-form-panel {
+    min-width: 300px;
+    align-self: stretch;
+  }
+  .worldwide-proxies .worldwide-proxies-countries {
+    grid-template-columns: 1fr;
+  }
+  .pricing .pricing-table {
+    grid-template-columns: 1fr;
+  }
+  .faqs {
+    width: var(--primary-container-width);
+  }
+  footer {
+    background-image: url(../images/footer-main-bg\(2\).png);
+    background-size: 100% 90%;
+  }
+}
+@media (width <= 500px) {
+  .proxy-generator .proxy-generator-inner .proxy-generator-form-panel h4,
+  .proxy-generator .proxy-generator-inner .proxy-generator-form-panel button,
+  .proxy-generator .proxy-generator-inner .proxy-generator-form-panel select,
+  .proxy-generator .proxy-generator-inner .proxy-generator-form-panel div,
+  .proxy-generator .proxy-generator-inner .proxy-generator-form-panel input {
+    font-size: 12px !important;
+  }
+  .proxy-generator .proxy-generator-inner .proxy-generator-form-panel .proxy-generator-form-header > div {
+    gap: 2px;
+  }
+  .proxy-generator .proxy-generator-inner .proxy-generator-form-panel select,
+  .proxy-generator .proxy-generator-inner .proxy-generator-form-panel button,
+  .proxy-generator .proxy-generator-inner .proxy-generator-form-panel input {
+    padding: 5px 2px;
+  }
+  footer .footer-bottom-panel img {
+    max-width: 40px !important;
+  }
+}
+@media (width > 768px) {
+  .company-stats-inner :is(.company-stat, .proxies-stat):not(:last-child),
+  .proxies-stats :is(.company-stat, .proxies-stat):not(:last-child) {
+    border-right: 1px solid rgb(207, 203, 221);
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,1546 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: 0.3s ease;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.gradient-btn {
+  padding: 12px 24px;
+  background-color: blue; /* Background color for the first button */
+  border-radius: 10px;
+  background: linear-gradient(
+    287.06deg,
+    var(--purple) 0.97%,
+    var(--orange) 52.62%
+  );
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.gradient-btn::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 2px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    287.06deg,
+    var(--purple) 0.97%,
+    var(--orange) 52.62%
+  );
+  filter: blur(10px);
+  z-index: -1; /* Place the gradient behind the button content */
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.gradient-btn:hover {
+  background: linear-gradient(
+    287.06deg,
+    var(--orange) 0.97%,
+    var(--purple) 52.62%
+  );
+}
+
+img {
+  width: 100%;
+}
+
+:root {
+  --orange: rgba(243, 120, 32, 1);
+  --purple: rgba(124, 57, 244, 1);
+  --dark-blue: rgba(2, 31, 89, 1);
+  --blue: rgba(34, 59, 110, 1);
+  --grey: rgba(92, 102, 122, 1);
+  --dark-grey: rgba(77, 92, 122, 1);
+  --lighter-grey: rgba(127, 138, 160, 1);
+  --light-grey: rgba(104, 114, 134, 1);
+
+  --primary-container-width: 85%;
+  --primary-container-max-width: 1900px;
+}
+
+/* _________ALL MAIN STYLING__________ */
+
+nav .container-fluid,
+main .hero,
+.featured-in,
+.proxy-products,
+.hassle-free,
+.proxies-benefits-header,
+.integrations-compatibility-inner,
+.company-stats-inner,
+.proxy-uses-cards-inner,
+.proxies-uses-header,
+.proxy-success-rates-inner,
+.proxies-stats,
+.proxy-generator-inner,
+.customer-reviews-outer,
+.features,
+.worldwide-proxies,
+.pricing,
+.footer-bottom-panel {
+  max-width: 1800px;
+  width: var(--primary-container-width);
+  margin-inline: auto;
+}
+
+main {
+  background-image: url(../images/header-bg-img.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top right;
+
+  nav {
+    background-color: transparent !important;
+
+    .container-fluid {
+      border-bottom: 1px solid rgba(214, 220, 228, 1);
+
+      .navbar-brand {
+        max-width: 80px;
+      }
+
+      .nav-link {
+        color: green;
+        &.mobile-language-dropdown {
+          color: var(--grey);
+          font-weight: 500;
+        }
+      }
+
+      .nav-link,
+      .nav-btn {
+        color: var(--dark-blue);
+        font-weight: 700;
+      }
+    }
+  }
+
+  .hero {
+    gap: 250px;
+    margin-top: 100px;
+  }
+}
+
+.hero-text-panel {
+  .hero-company-rating-imgs {
+    .hero-company-rating-img {
+      max-width: 100px;
+
+      &:not(:last-child) {
+        border-right: 1px solid #e7e7e7;
+      }
+    }
+  }
+
+  .hero-heading {
+    color: var(--dark-blue);
+    font-weight: 600;
+    span {
+      color: var(--orange);
+    }
+  }
+
+  p {
+    color: var(--grey);
+    font-weight: 500;
+  }
+
+  .hero-btns {
+    button {
+      // text-wrap: nowrap;
+
+      padding: 12px 24px;
+      // &:nth-child(1) {
+      //   background-color: blue; /* Background color for the first button */
+      //   border-radius: 10px;
+      //   background: linear-gradient(
+      //     287.06deg,
+      //     var(--purple) 0.97%,
+      //     var(--orange) 52.62%
+      //   );
+      //   color: white;
+      //   position: relative;
+      // }
+
+      // &:nth-child(1)::before {
+      //   content: "";
+      //   position: absolute;
+      //   top: 10px;
+      //   right: 2px;
+      //   width: 100%;
+      //   height: 100%;
+      //   background: linear-gradient(
+      //     287.06deg,
+      //     var(--purple) 0.97%,
+      //     var(--orange) 52.62%
+      //   );
+      //   filter: blur(10px);
+      //   z-index: -1; /* Place the gradient behind the button content */
+      //   opacity: 0.7;
+      //   transition: opacity 0.3s ease;
+      // }
+
+      // &:nth-child(1):hover {
+      //   background: linear-gradient(
+      //     287.06deg,
+      //     var(--orange) 0.97%,
+      //     var(--purple) 52.62%
+      //   );
+      // }
+
+      &:nth-child(2) {
+        img {
+          max-width: 20px;
+        }
+      }
+
+      &:nth-child(2):hover {
+        background: linear-gradient(
+          287.06deg,
+          var(--purple) 0.97%,
+          var(--orange) 52.62%
+        );
+        background-clip: text;
+        -webkit-background-clip: text; /* For Safari/Chrome */
+        color: transparent;
+      }
+    }
+  }
+
+  .hero-residential-proxies {
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    gap: 20px;
+    color: var(--dark-blue);
+
+    h2 {
+      font-weight: 700;
+    }
+  }
+}
+
+.featured-in {
+  h3 {
+    color: var(--blue);
+  }
+  .featured-in-imgs {
+    padding-block: 20px;
+    border-top: 1px dashed rgba(207, 203, 221, 1);
+    border-bottom: 1px dashed rgba(207, 203, 221, 1);
+    justify-items: center;
+    align-content: center;
+    img {
+      max-width: 200px;
+    }
+  }
+}
+
+.proxy-products {
+  h2 {
+    font-weight: 600;
+    color: var(--dark-blue);
+  }
+
+  p {
+    color: var(--dark-blue);
+  }
+
+  .proxy-products-items {
+    gap: 20px;
+    .proxy-products-item {
+      flex-basis: calc(50% - 10px) !important;
+
+      align-items: flex-start;
+      background-color: aqua;
+      position: relative;
+      padding: 40px;
+      border-radius: 15px;
+
+      &:is(:nth-child(1), :nth-child(2)) {
+        padding-top: 80px;
+      }
+
+      &:nth-child(1) {
+        background: linear-gradient(289.14deg, #8a49ff -6.56%, #fe9d58 49.92%);
+      }
+
+      &:nth-child(2) {
+        background-color: rgb(79, 155, 255);
+      }
+
+      &:is(:nth-child(3), :nth-child(4)) {
+        background-color: rgb(247, 247, 247);
+        h3 {
+          color: black;
+        }
+
+        ul {
+          color: var(--dark-grey);
+        }
+      }
+
+      .proxy-products-item-badge {
+        background-color: white;
+        color: var(--dark-blue);
+        // align-self: flex-end;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+      }
+
+      .proxy-products-item-img {
+        max-width: 65px;
+      }
+
+      h3 {
+        color: white;
+      }
+
+      ul {
+        color: white;
+        display: grid;
+        gap: 10px;
+        li {
+          img {
+            width: 20px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.proxy-products-qualites {
+  width: 100%;
+
+  .proxy-products-qualites-row {
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .proxy-products-qualites-row.row-1 {
+    position: relative;
+
+    .proxy-product-quality {
+      min-height: 100px;
+    }
+  }
+
+  .proxy-products-qualites-row.row-2 {
+    border-top: 1px solid rgba(207, 203, 221, 1);
+    border-bottom: 1px solid rgba(207, 203, 221, 1);
+
+    .proxy-product-quality {
+      min-height: 160px;
+      text-align: center;
+    }
+  }
+
+  .proxy-products-qualites-row.row-1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, transparent, white);
+  }
+
+  .proxy-products-qualites-row:is(.row-1, .row-2)
+    .proxy-product-quality:not(:last-child) {
+    border-right: 1px solid rgba(207, 203, 221, 1);
+  }
+
+  .proxy-products-qualites-row.row-2 .proxy-product-quality img {
+    max-width: 30px;
+  }
+}
+
+.hassle-free {
+  margin-top: 100px;
+  gap: 30px;
+
+  .hassle-free-text-panel {
+    h2 {
+      color: var(--dark-blue);
+      font-weight: 600;
+    }
+
+    p {
+      color: var(--grey);
+    }
+    ul {
+      li {
+        color: var(--dark-blue);
+        img {
+          max-width: 20px;
+        }
+      }
+    }
+  }
+}
+
+.proxies-benefits {
+  margin-top: 100px;
+  .proxies-benefits-header {
+    background-image: url(../images/proxies-benefits-header-bg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+    padding-bottom: 8%;
+
+    .proxies-benefits-header-inner {
+      margin-left: -7%;
+      width: 100%;
+      gap: 8%;
+
+      .proxies-benefits-header-img {
+        width: 35%;
+        min-width: 300px;
+      }
+
+      h2 {
+        margin-bottom: 8.5%;
+        font-size: 46px;
+        color: white;
+        font-weight: 600;
+      }
+
+      // & > * {
+      //   flex: 1;
+      // }
+    }
+  }
+
+  .proxies-benefits-content {
+    .proxies-benefits-content-row {
+      gap: 12%;
+      .proxies-benefit {
+        h4 {
+          color: var(--dark-blue);
+        }
+
+        div {
+          color: var(--lighter-grey);
+        }
+
+        img {
+          width: 65px;
+        }
+      }
+    }
+  }
+}
+
+.integrations-compatibility {
+  background-color: rgba(248, 247, 253, 1);
+  margin-top: 100px;
+  .integrations-compatibility-inner {
+    .integrations-compatibility-text {
+      color: var(--dark-blue);
+      h2 {
+        font-weight: 600;
+      }
+      p {
+        font-weight: 400;
+      }
+    }
+
+    .integrations-compatibility-img {
+      max-width: 700px;
+      margin-left: auto;
+    }
+  }
+}
+
+.company-stats,
+.proxies-stats {
+  margin-top: 100px;
+  border-top: 1px solid rgba(207, 203, 221, 1);
+  border-bottom: 1px solid rgba(207, 203, 221, 1);
+
+  .company-stats-inner {
+    h2 {
+      color: var(--dark-blue);
+      font-weight: 600;
+    }
+
+    p {
+      color: var(--light-grey);
+      font-weight: 400;
+    }
+  }
+}
+
+.proxies-uses {
+  margin-top: 100px;
+  .proxies-uses-inner {
+    h2 {
+      color: var(--dark-blue);
+      font-weight: 600;
+    }
+    & > p {
+      color: var(--dark-blue);
+      font-weight: 400;
+      max-width: 700px;
+      margin-inline: auto;
+    }
+
+    .proxy-uses-cards {
+      background-color: rgba(247, 247, 247, 1);
+      position: relative;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 200px;
+        z-index: 10;
+      }
+      &::before {
+        top: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 1),
+          rgba(255, 255, 255, 0)
+        );
+      }
+      &::after {
+        bottom: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0),
+          rgba(255, 255, 255, 1)
+        );
+      }
+
+      .proxy-uses-cards-inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: start;
+        column-gap: 20px;
+        position: relative;
+        z-index: 1;
+
+        .proxy-use-card {
+          flex: 1 1 calc(25% - 20px);
+          aspect-ratio: 3/2;
+          border-radius: 10px;
+          border: 1px solid rgba(207, 203, 221, 1);
+          background-color: white;
+
+          &:nth-of-type(2n) {
+            margin-top: 20px;
+          }
+
+          img {
+            max-width: 30px;
+          }
+
+          p {
+            color: var(--dark-blue);
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    .proxy-uses-btns {
+      .proxy-uses-contact-btn {
+        padding: 12px 24px;
+        border: 1px solid var(--grey);
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+.proxy-success-rates {
+  margin-top: 100px;
+  position: relative;
+  min-height: 700px;
+
+  // background-image: url(../images/proxy-success-rates-bg-1.png);
+  // background-size: contain;
+  // background-position: center;
+  // background-repeat: no-repeat;
+
+  // z-index: 10;
+
+  .proxy-success-rates-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    img {
+      height: 100%;
+    }
+  }
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 0;
+  //   transform: translateY(-50%);
+  //   height: 60%;
+  //   width: 100%;
+  //   background-color: rgba(248, 247, 253, 1);
+  //   z-index: 9;
+  // }
+
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   height: 100%;
+  //   width: 100%;
+
+  //   background-image: url(../images/proxy-success-rates-bg.png);
+  //   background-size: 55% 100%;
+  //   background-position: right;
+  //   background-repeat: no-repeat;
+
+  //   z-index: 10;
+  // }
+
+  .proxy-success-rates-inner {
+    position: relative;
+    top: -40px;
+    z-index: 11;
+
+    gap: 50px;
+
+    .proxy-success-rates-img {
+      max-width: 650px;
+    }
+
+    .proxy-success-rates-text {
+      color: white;
+    }
+  }
+}
+
+.proxies-stats {
+  border-radius: 10px;
+  h2 {
+    color: var(--dark-blue);
+    font-weight: 600;
+  }
+
+  p {
+    color: var(--light-grey);
+    font-weight: 400;
+  }
+}
+
+// CUSTOMER REVIEWS
+
+.customer-reviews-outer-wrapper {
+  margin-top: 100px;
+  .customer-reviews-outer {
+    background-color: rgb(247, 249, 252);
+    border-radius: 20px;
+    padding-inline: 80px;
+    .customer-reviews {
+      // background-color: rgb(247, 249, 252);
+      // border-radius: 20px;
+      // padding: 0 70px;
+      // max-height: 350px;
+      overflow-y: hidden;
+      width: 100%;
+      margin-inline: auto;
+
+      .customer-reviews-text-panel {
+        align-self: center;
+        .customer-reviews-branding {
+          & > div:first-child {
+            border-right: 1px solid var(--grey);
+          }
+          img {
+            width: 200px;
+          }
+        }
+      }
+
+      .customer-reviews-panel {
+        // border: 3px solid #0000ff;
+        max-height: 350px;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        .customer-review-cards {
+          // border: 3px solid green;
+          height: fit-content;
+          gap: 20px;
+          // overflow-y: auto;
+
+          // &::-webkit-scrollbar {
+          //   display: none;
+          // }
+
+          &:first-child {
+            animation: scrollAnimation1 3s linear infinite alternate;
+          }
+          &:last-child {
+            animation: scrollAnimation2 3s linear infinite alternate;
+          }
+
+          @keyframes scrollAnimation1 {
+            0% {
+              transform: translateY(0);
+            }
+            100% {
+              transform: translateY(-100%);
+            }
+          }
+
+          @keyframes scrollAnimation2 {
+            0% {
+              transform: translateY(-100%);
+            }
+            100% {
+              transform: translateY(0);
+            }
+          }
+
+          .customer-review-cards-inner {
+            border: 3px solid grey;
+          }
+        }
+        .customer-review-card {
+          background-color: white;
+          border-radius: 10px;
+
+          .customer-review-rating {
+            img {
+              max-width: 15px;
+            }
+          }
+
+          .customer-review-profile {
+            img {
+              width: 45px;
+              height: 45px;
+            }
+            gap: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+// PROXY GENERATOR
+
+.proxy-generator {
+  margin-top: 100px;
+
+  background-image: url(../images/proxy-generator-bg.png);
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+
+  padding-block: 150px;
+
+  .proxy-generator-inner {
+    position: relative;
+    top: -70px;
+    gap: 120px;
+    .proxy-generator-text-panel {
+      // width: fit-content;
+      flex-grow: 1; /* Grow to fill available space */
+      flex-shrink: 1; /* Allow shrinking when space is limited */
+      flex-basis: 0;
+
+      color: white;
+
+      h2 {
+        font-weight: 600;
+      }
+      p {
+        font-weight: 500;
+      }
+    }
+    .proxy-generator-form-panel {
+      background-color: rgba(212, 212, 212, 0.5);
+      border-radius: 20px;
+      max-width: 950px;
+      flex-basis: 100%;
+      min-width: 500px;
+      flex-shrink: 1; /* Allow shrinking when space is limited */
+
+      .proxy-generator-form {
+        background-color: rgb(123, 86, 196);
+        color: white;
+        border-radius: 10px;
+
+        .proxy-generator-form-header > div {
+          gap: 7px;
+        }
+
+        .proxy-details {
+          & > div {
+            flex: 1;
+          }
+
+          & > div:not(:last-child) {
+            border-right: 1px solid white;
+          }
+        }
+      }
+    }
+  }
+}
+
+// FEATURES
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 100px;
+  gap: 20px;
+
+  .feature {
+    background-color: rgb(247, 249, 252);
+    // aspect-ratio: 1/1;
+    padding: 40px;
+    border-radius: 20px;
+
+    img {
+      max-width: 60px;
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      margin-bottom: 30px;
+      color: var(--dark-blue);
+    }
+
+    p {
+      color: var(--lighter-grey);
+    }
+  }
+}
+
+// Worldwide proxies
+
+.worldwide-proxies {
+  margin-top: 100px;
+  color: var(--dark-blue);
+
+  h2 {
+    font-weight: 600;
+  }
+
+  .worldwide-proxies-countries {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+
+    .proxy-country {
+      background-color: rgb(247, 249, 252);
+
+      &.proxy-country-germany {
+        display: none !important;
+      }
+
+      p {
+        color: var(--lighter-grey);
+      }
+    }
+  }
+}
+
+// Pricing
+
+.pricing {
+  color: var(--dark-blue);
+  margin-top: 100px;
+  h2 {
+    font-weight: 600;
+  }
+
+  .pricing-table {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: start;
+    gap: 20px;
+
+    .pricing-table-column {
+      border: 1.5px solid rgba(230, 233, 239, 1);
+
+      .pricing-table-column-header {
+        min-height: 90px;
+        background-color: rgb(247, 249, 252);
+
+        &.column-header-1 {
+          background-color: rgb(233, 229, 248);
+        }
+
+        &.column-header-2 {
+          background-color: rgb(255, 225, 204);
+        }
+
+        &.column-header-3 {
+          background-color: rgb(233, 229, 248);
+        }
+
+        img {
+          max-width: 100px;
+        }
+      }
+
+      .pricing-table-column-cells {
+        .pricing-table-column-cell {
+          min-height: 90px;
+          &:not(:last-child) {
+            border-bottom: 1px solid rgba(230, 233, 239, 1);
+          }
+          &.last-column-cell {
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// FAQs
+
+.faqs {
+  max-width: 1400px;
+  margin-inline: auto;
+
+  color: var(--dark-blue);
+  margin-top: 100px;
+  h2 {
+    font-weight: 600;
+  }
+
+  .faqs-qnas {
+    .faqs-qna {
+      border: 1.5px solid rgba(230, 233, 239, 1);
+    }
+  }
+}
+
+// Footer
+
+footer {
+  margin-top: 150px;
+  background-image: url(../images/footer-main-bg.png);
+  background-size: 100% auto;
+  background-position: bottom;
+  background-repeat: no-repeat;
+
+  // .footer-wrapper {
+  .footer-inner {
+    margin-inline: auto;
+    padding-inline: 80px;
+    max-width: 1800px;
+    width: var(--primary-container-width);
+    .footer-top-panel {
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+      position: relative;
+      background-color: rgb(253, 231, 215);
+      overflow: hidden;
+      h3 {
+        position: relative;
+        z-index: 2;
+        max-width: 500px;
+        font-weight: 500;
+      }
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        z-index: 1;
+      }
+    }
+
+    .footer-main-panel {
+      margin: 80px 0 90px 0;
+      color: white;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      .footer-main-panel-col {
+        // .footer-main-panel-link {
+        a {
+          color: white;
+          text-decoration: none;
+          img {
+            max-width: 25px;
+          }
+          // }
+
+          .footer-social-media-links {
+            img {
+              width: 25px;
+            }
+          }
+        }
+
+        select {
+          background-color: rgba(255, 255, 255, 0.3);
+          color: white;
+          max-width: 180px;
+          padding-block: 12px;
+
+          border: none;
+
+          option {
+            background-color: grey;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom-panel {
+    padding: 30px 0 80px 0;
+    border-top: 1px solid rgba(208, 204, 219, 1);
+    & > div:nth-child(1) {
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+
+    & > div:nth-child(2) {
+      gap: 10px;
+    }
+    img {
+      max-width: 70px !important;
+    }
+  }
+}
+
+@media (width <= 1919px) {
+  :root {
+    --primary-container-width: 80%;
+  }
+
+  main {
+    nav {
+      border-bottom: 1px solid rgba(214, 220, 228, 1);
+
+      .container-fluid {
+        border-bottom: none !important;
+        width: 90%;
+
+        .nav-items-left {
+          .nav-link {
+            font-weight: 600;
+          }
+        }
+
+        .nav-items-right {
+          .nav-link,
+          .nav-btn {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    .hero {
+      gap: 40px;
+      margin-top: 70px;
+    }
+  }
+
+  .featured-in {
+    .featured-in-imgs {
+      img {
+        max-width: 150px;
+      }
+    }
+  }
+
+  .proxies-benefits {
+    margin-top: 200px;
+    .proxies-benefits-header {
+      background-image: url(../images/proxies-benefits-header-bg-mobile.png);
+      padding-bottom: 10%;
+      .proxies-benefits-header-inner {
+        margin-left: 5%;
+        // margin-inline: auto;
+        gap: 4%;
+
+        .proxies-benefits-header-img {
+          width: 43%;
+        }
+
+        h2 {
+          margin-bottom: 14%;
+        }
+      }
+    }
+  }
+
+  .proxies-benefits-content {
+    margin-inline: auto;
+    width: var(--primary-container-width);
+  }
+
+  .company-stats {
+    width: var(--primary-container-width);
+    margin-inline: auto;
+    border-radius: 10px;
+    .company-stats-inner {
+      width: 100%;
+    }
+  }
+
+  .proxies-uses {
+    .proxies-uses-inner {
+      .proxy-uses-cards {
+        background-color: white;
+        // &::before,
+        // &::after {
+        //   display: none;
+        // }
+        .proxy-uses-cards-inner {
+          // row-gap: 20px;
+          .proxy-use-card {
+            aspect-ratio: 1/1;
+
+            &:hover {
+              box-shadow: 0 2px 30px rgba(0, 0, 0, 0.2);
+            }
+
+            // &:nth-of-type(2n) {
+            //   margin-top: 0;
+            // }
+          }
+        }
+      }
+    }
+  }
+
+  .proxy-generator {
+    background-image: url(../images/proxy-generator-bg-2.png);
+    padding-block: 10%;
+
+    .proxy-generator-inner {
+      top: -40px;
+      gap: 80px;
+      .proxy-generator-form-panel {
+        max-width: 700px;
+        flex-basis: 100%;
+        min-width: 500px;
+      }
+    }
+  }
+
+  .customer-reviews-outer-wrapper {
+    padding-inline: 60px;
+    .customer-reviews-outer {
+      max-width: 2000px;
+      padding-inline: 0;
+
+      width: 100%;
+      .customer-reviews {
+        width: calc(var(--primary-container-width) + 90px) !important;
+      }
+    }
+  }
+
+  // .features {
+  //   .feature {
+  //     aspect-ratio: 1/1;
+  //   }
+  // }
+
+  .worldwide-proxies {
+    .worldwide-proxies-countries {
+      grid-template-columns: repeat(3, 1fr);
+
+      .proxy-country {
+        background-color: rgb(247, 249, 252);
+
+        &.proxy-country-germany {
+          display: flex !important;
+        }
+      }
+    }
+  }
+
+  .faqs {
+    width: 70%;
+  }
+
+  // footer {
+  .footer-wrapper {
+    padding-inline: 60px;
+    .footer-inner {
+      padding-inline: 0;
+      max-width: 2000px;
+      width: 100%;
+      .footer-inner-content {
+        margin-inline: auto;
+        width: calc(var(--primary-container-width) + 90px) !important;
+      }
+    }
+  }
+}
+
+@media (width <= 1400px) {
+  footer {
+    background-size: 100% 85%;
+  }
+}
+
+@media (width <= 1100px) {
+  :root {
+    --primary-container-width: 90%;
+  }
+  main {
+    .hero {
+      gap: 40px;
+    }
+  }
+
+  .proxy-generator {
+    background: none;
+    padding-block: 0;
+
+    .proxy-generator-inner {
+      flex-direction: column;
+      align-items: flex-start !important;
+      top: 0;
+      gap: 30px;
+
+      .proxy-generator-text-panel {
+        color: var(--dark-blue);
+      }
+
+      .proxy-generator-form-panel {
+        align-self: center;
+        min-width: 600px;
+      }
+    }
+  }
+
+  .customer-reviews-outer-wrapper {
+    padding-inline: 0;
+    .customer-reviews-outer {
+      .customer-reviews {
+        width: calc(var(--primary-container-width)) !important;
+      }
+    }
+  }
+}
+
+@media (width < 992px) {
+  .customer-reviews-outer-wrapper {
+    .customer-reviews-outer {
+      .customer-reviews {
+        .customer-reviews-panel {
+          margin-top: 50px;
+          max-height: 100%;
+          .customer-review-cards {
+            &:first-child,
+            &:last-child {
+              animation: none;
+            }
+            padding-inline: 0 !important;
+          }
+        }
+      }
+    }
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    .feature {
+      max-width: 500px;
+    }
+  }
+
+  footer {
+    .footer-wrapper {
+      padding-inline: 0;
+      .footer-inner {
+        width: 100%;
+        .footer-inner-content {
+          width: var(--primary-container-width) !important;
+          .footer-main-panel {
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+          }
+        }
+      }
+    }
+    .footer-bottom-panel {
+      gap: 10px;
+      flex-direction: column;
+      img {
+        max-width: 40px;
+      }
+    }
+  }
+}
+
+@media (width <= 825px) {
+  .proxies-uses {
+    .proxies-uses-inner {
+      .proxy-uses-cards {
+        &::before,
+        &::after {
+          background: linear-gradient(to bottom, transparent, transparent);
+        }
+        .proxy-uses-cards-inner {
+          row-gap: 20px;
+          .proxy-use-card {
+            flex: 1 1 calc(50% - 20px);
+            &:nth-of-type(2n) {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width <= 768px) {
+  main {
+    background-image: url(../images/header-bg-img-mobile.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+    nav {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero {
+      margin-top: 50px;
+    }
+  }
+
+  .hero-text-panel {
+    text-align: center;
+
+    .hero-company-rating-imgs {
+      justify-content: center;
+    }
+
+    .hero-btns {
+      flex-direction: column;
+    }
+
+    .hero-residential-proxies-wrapper {
+      display: none !important;
+    }
+  }
+
+  .featured-in {
+    .featured-in-imgs {
+      img {
+        max-width: 150px;
+        margin: auto;
+      }
+    }
+  }
+
+  .proxy-products {
+    h2 {
+      font-weight: 600;
+      color: var(--dark-blue);
+    }
+
+    p {
+      color: var(--dark-blue);
+    }
+  }
+
+  .proxy-products-qualites-row.row-2 .proxy-product-quality:not(:last-child) {
+    border-bottom: 1px solid rgba(207, 203, 221, 1);
+  }
+
+  .hassle-free {
+    display: none;
+  }
+
+  .proxies-benefits {
+    .proxies-benefits-header {
+      padding-bottom: 14%;
+      width: 100%;
+      .proxies-benefits-header-inner {
+        .proxies-benefits-header-img {
+          width: 50% !important;
+          min-width: 200px;
+        }
+
+        h2 {
+          // visibility: hidden;
+          display: none;
+        }
+      }
+    }
+
+    .proxies-benefits-content {
+      .proxies-benefits-content-row {
+        gap: 40px;
+      }
+    }
+  }
+
+  .company-stats-inner {
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      background-color: rgba(207, 203, 221, 1);
+      z-index: 100;
+    }
+
+    &::before {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 100%;
+      width: 1px;
+    }
+
+    &::after {
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 1px;
+    }
+  }
+
+  .proxy-success-rates {
+    background-color: rgb(248, 247, 253);
+    .proxy-success-rates-inner {
+      top: 0;
+      .proxy-success-rates-text {
+        color: var(--dark-blue);
+      }
+    }
+  }
+
+  .proxies-stats {
+    .proxies-stat:nth-child(1) {
+      border-right: 1px solid #cfcbdd;
+    }
+
+    .proxies-stat:nth-child(3) {
+      border-top: 1px solid #cfcbdd;
+    }
+  }
+
+  .proxy-generator {
+    .proxy-generator-inner {
+      .proxy-generator-form-panel {
+        min-width: 300px;
+        align-self: stretch;
+      }
+    }
+  }
+
+  .worldwide-proxies {
+    .worldwide-proxies-countries {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .pricing {
+    .pricing-table {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .faqs {
+    width: var(--primary-container-width);
+  }
+
+  // footer {
+  //   background-image: url(../images/footer-main-bg(2).png);
+  // }
+
+  footer {
+    background-image: url(../images/footer-main-bg\(2\).png);
+    background-size: 100% 90%;
+  }
+}
+
+@media (width <= 500px) {
+  .proxy-generator {
+    .proxy-generator-inner {
+      .proxy-generator-form-panel {
+        h4,
+        button,
+        select,
+        div,
+        input {
+          font-size: 12px !important;
+        }
+
+        .proxy-generator-form-header > div {
+          gap: 2px;
+        }
+
+        select,
+        button,
+        input {
+          padding: 5px 2px;
+        }
+      }
+    }
+  }
+
+  footer {
+    .footer-bottom-panel {
+      img {
+        max-width: 40px !important;
+      }
+    }
+  }
+}
+
+@media (width > 768px) {
+  .company-stats-inner,
+  .proxies-stats {
+    :is(.company-stat, .proxies-stat):not(:last-child) {
+      border-right: 1px solid rgba(207, 203, 221, 1);
+    }
+  }
+}
